@@ -1,0 +1,7 @@
+spring: 
+   application:
+      name: eureka-server
+   cloud:
+      config:
+         uri: http://127.0.0.1:9900
+         failFast: true   #启动失败时能够快速响应

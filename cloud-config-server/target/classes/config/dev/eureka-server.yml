@@ -1,0 +1,23 @@
+#设置服务名
+spring:
+  application:
+    name: eureka-server
+    
+#server 端口号设置
+server:
+  port: 9910
+  
+  
+
+#注册中心设置，server本身不被发现
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    registerWithEureka: false   #由于目前创建的应用是一个服务注册中心，而不是普通的应用，默认情况下，应用会向注册中心（也是它自己）注册它自己，设置为false表示禁止这种默认行为
+    fetchRegistry: false        #表示不去检索其他的服务，因为服务注册中心本身的职责就是维护服务实例，它也不需要去检索其他服务
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.port}/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enable-self-preservation: false

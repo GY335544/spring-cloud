@@ -1,0 +1,12 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://47.96.93.178:9910/eureka
+server:
+  port: 9300
+spring:
+  application:
+    name: service-feign
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,18 @@
+#server 端口号
+server:
+  port: 9970
+spring: 
+   application: 
+      name: cms-provider
+   #cloud:
+   #   config: 
+   #      discovery: 
+   #         enabled: true
+   #         serviceId: config-server
+   #      failFast: true
+   #      name: cms-provider
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://47.96.93.178:9910/eureka     
